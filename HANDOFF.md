@@ -4,7 +4,7 @@ Updated 15 November 2026 after the combined-v2 redesign. This file supersedes th
 
 ## Submission artifacts update
 
-The repository is now public. A 28-second MP4 and GIF walkthrough are in [docs/demo](docs/demo/README.md); [SUBMISSION.md](SUBMISSION.md) contains public links, form copy and attribution. The project form has been filled as part of submission preparation, but its terms/original-work confirmations are left to the owner. The site required those confirmations even to save progress. No NASA submission has been completed by this assistant.
+The repository is now public. A 28-second MP4 and GIF walkthrough are in [docs/demo](docs/demo/README.md); [SUBMISSION.md](SUBMISSION.md) contains public links, form copy and attribution. The owner checked the terms/original-work confirmations in the browser. The assistant added the public demo link, saved the completed form and verified its saved revision at **15 November 2026 20:47**. The page still required **Submit for Judging**; the assistant did not click that final button.
 
 ## What we made
 

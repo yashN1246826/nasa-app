@@ -71,6 +71,6 @@ System fonts resolve from the viewer’s OS. Screenshots are of the team’s app
 
 ## Submission verification
 
-The form requires the team owner to agree to the submission requirements, Participant Terms and Conditions and Privacy Policy, and to confirm original work/resource attribution. During preparation, **Save Progress also required these boxes**. They were left unchecked. Review the filled content and these statements before accepting them; preparing this file or pushing the video does not submit the project.
+The form requires the team owner to agree to the submission requirements, Participant Terms and Conditions and Privacy Policy, and to confirm original work/resource attribution. During preparation, **Save Progress also required these boxes**. The assistant initially left them unchecked. The owner then checked both confirmations in the browser. After adding the public demo link, the assistant saved the completed draft and verified **Saved Revision / Last Saved: 15 November 2026 20:47**. The page still said **Project Requires Submission for Judging**. The assistant did not click Submit for Judging.
 
 Use the team Project tab: https://www.spaceappschallenge.org/2026/find-a-team/notttsswe/?tab=project
