@@ -2,6 +2,10 @@
 
 Updated 15 November 2026 after the combined-v2 redesign. This file supersedes the older design/status descriptions in the historical context documents. See [DESIGN_REVIEW.md](DESIGN_REVIEW.md) for evidence and remaining manual checks.
 
+## Submission artifacts update
+
+The repository is now public. A 28-second MP4 and GIF walkthrough are in [docs/demo](docs/demo/README.md); [SUBMISSION.md](SUBMISSION.md) contains public links, form copy and attribution. The project form has been filled as part of submission preparation, but its terms/original-work confirmations are left to the owner. The site required those confirmations even to save progress. No NASA submission has been completed by this assistant.
+
 ## What we made
 
 ASTRA demonstrates an astronaut health check-in → crew medical officer → ground flight surgeon handover. Five fictional crew members have resting heart rate, sleep duration, fluid intake, exercise time and mood observations. The app compares recorded days with illustrative personal baselines, highlights changes, retains rechecks and simulates fixed reports and replies.
@@ -12,7 +16,7 @@ It runs entirely in a browser. There are no real astronaut records, sensors, aut
 
 - Team **notttsSWE**: Yash Kumar and Pawan Krishnamoorthy; London virtual Space Apps event.
 - Challenge: [Create Health Monitoring Software for Astronauts on Space Missions](https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/).
-- Repository: https://github.com/yashN1246826/nasa-app — private at last check.
+- Repository: https://github.com/yashN1246826/nasa-app — public, verified without authentication on 15 November 2026.
 - Yash: `yashN1246826`. Pawan: `pawankps44`; accepted collaborator with write access at the earlier 15 November check.
 - Original Yash-branch prototype: `8180c03`; context documentation `6795334`; earlier handoff `4c396f9`. Research, implementation and documentation used AI assistance.
 - Pawan’s v2: `e040831`, branch `pawan-crew-health-v2`, [PR #2](https://github.com/yashN1246826/nasa-app/pull/2), based on our feature branch. It added multi-crew roles, personal baselines, verification/rechecks, scoring, review notes, local downlink/uplink, migrations and merge logic, plus 41 tests.
@@ -77,7 +81,7 @@ Submit through [notttsSWE’s Project tab](https://www.spaceappschallenge.org/20
 
 The previously inspected organiser email and [submission guide](https://www.spaceappschallenge.org/resources/project-submission-guide/) recorded **15 November 2026, 23:59 UK time**. This is a recorded deadline, not a fresh verification of account/submission status.
 
-Remaining submission work: team review, final public artifact/app links, a demo of at most 30 seconds or seven slides, English project summary/details, actual NASA references, AI-use disclosure and signed-out link checks. The repository is private and localhost is unavailable to judges. A team member must review the submission terms and complete Submit for Judging; saving a draft is not submission. This assistant has not deployed or submitted the project.
+Remaining submission work: team review, final public artifact/app links, a demo of at most 30 seconds or seven slides, English project summary/details, actual NASA references, AI-use disclosure and signed-out link checks. The repository is public; localhost remains unavailable to judges. The form explicitly accepts a public code repository as the project artifact. A team member must review the submission terms and complete Submit for Judging; saving a draft is not submission. This assistant has not deployed or submitted the project.
 
 ## Supporting context
 

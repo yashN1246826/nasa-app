@@ -4,6 +4,10 @@ A React web demonstration for **notttsSWE** (Yash Kumar and Pawan Krishnamoorthy
 
 Record fictional observations, review a crew queue, then simulate sending a fixed health summary to a ground flight surgeon. All roles and communication run locally in the browser.
 
+## Demonstration
+
+[Watch the 28-second demo and GIF walkthrough](docs/demo/README.md). [Submission details and attribution](SUBMISSION.md).
+
 ## Run
 
 Use Node.js 20.19+ or 22.12+.
