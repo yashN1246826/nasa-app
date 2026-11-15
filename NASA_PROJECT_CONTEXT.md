@@ -1,3 +1,5 @@
+> Current version: the combined-v2 redesign is documented in [HANDOFF.md](HANDOFF.md) and [DESIGN_REVIEW.md](DESIGN_REVIEW.md), updated 15 November 2026. The account research below is historical; its original app/access descriptions predate these updates.
+
 # NASA project context — ASTRA / notttsSWE
 
 > For the latest state as of 15 November, read [HANDOFF.md](HANDOFF.md). The snapshot below predates Pawan's v2 branch, accepted collaborator access and subsequent user feedback.

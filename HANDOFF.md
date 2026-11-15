@@ -1,171 +1,86 @@
-# ASTRA — project handoff
+# ASTRA — current handoff
 
-Updated 15 November 2026. Start here for the current project state. [NASA_PROJECT_CONTEXT.md](NASA_PROJECT_CONTEXT.md) contains the longer research history; its 14 November snapshot predates Pawan's work and accepted GitHub access.
+Updated 15 November 2026 after the combined-v2 redesign. This file supersedes the older design/status descriptions in the historical context documents. See [DESIGN_REVIEW.md](DESIGN_REVIEW.md) for evidence and remaining manual checks.
 
-## What this project is
+## What we made
 
-ASTRA is a local, browser-based demonstration of astronaut health check-ins and crew medical handovers. It records five indicators, shows trends, and simulates a crew member → crew medical officer → ground flight surgeon workflow. It is a hackathon prototype with fictional data and illustrative health rules. It is not connected to NASA systems, real astronauts, sensors or a clinical service.
+ASTRA demonstrates an astronaut health check-in → crew medical officer → ground flight surgeon handover. Five fictional crew members have resting heart rate, sleep duration, fluid intake, exercise time and mood observations. The app compares recorded days with illustrative personal baselines, highlights changes, retains rechecks and simulates fixed reports and replies.
 
-- **Challenge:** [Create Health Monitoring Software for Astronauts on Space Missions](https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/).
-- **Team:** notttsSWE — Yash Kumar and Pawan Krishnamoorthy.
-- **Event:** London virtual event, NASA Space Apps 2026.
-- **Repository:** https://github.com/yashN1246826/nasa-app (private at the last repository check).
-- **GitHub accounts:** Yash `yashN1246826`; Pawan `pawankps44`.
-- **Pawan access:** accepted; write permission verified on 15 November.
+It runs entirely in a browser. There are no real astronaut records, sensors, authenticated roles, clinical validation, NASA integration, backend or external transmission. Role switching is a demonstration control, not access control. Scores are labelled “Demo comparison score”; “No flags under demo rules” is not fitness clearance.
 
-## Latest user feedback — preserve this
+## Project and contributors
 
-Yash explicitly rejected the current result as generic “AI slop.” Do not describe the current design as polished, approved, or submission-ready. No redesign has been agreed or implemented since that feedback. The user then requested an explanation of the app and this handoff.
+- Team **notttsSWE**: Yash Kumar and Pawan Krishnamoorthy; London virtual Space Apps event.
+- Challenge: [Create Health Monitoring Software for Astronauts on Space Missions](https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/).
+- Repository: https://github.com/yashN1246826/nasa-app — private at last check.
+- Yash: `yashN1246826`. Pawan: `pawankps44`; accepted collaborator with write access at the earlier 15 November check.
+- Original Yash-branch prototype: `8180c03`; context documentation `6795334`; earlier handoff `4c396f9`. Research, implementation and documentation used AI assistance.
+- Pawan’s v2: `e040831`, branch `pawan-crew-health-v2`, [PR #2](https://github.com/yashN1246826/nasa-app/pull/2), based on our feature branch. It added multi-crew roles, personal baselines, verification/rechecks, scoring, review notes, local downlink/uplink, migrations and merge logic, plus 41 tests.
+- This pass copied the combined-v2 source and tests onto the existing feature branch, then rebuilt the interface. It did **not** merge PR #2. Pawan’s data model is unchanged; five suggested-action strings now use neutral review wording. The complete original v2 test suite is retained.
 
-The next product pass needs a clear, useful astronaut workflow and a deliberate visual direction, rather than more decorative dashboard elements or feature accumulation. Ask for concrete feedback where needed, but do useful work without repeatedly asking for permission. Do not imply the current prototype has been accepted by the team.
+Current branch: `yashN1246826/nasa-project-app-build`. Existing [PR #1 — YN](https://github.com/yashN1246826/nasa-app/pull/1) targets `master` and receives this update. Do not rename the branch, push to master/main, merge either PR, deploy or submit to NASA without a separate instruction. Because v2 source was copied rather than merged, review PR #2’s overlap before any future merge.
 
-## Branches, commits and PRs
+## User direction and resulting design
 
-| Work                                 | Branch / commit                                                                    | PR and base                                                                                                                             |
-| ------------------------------------ | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Original prototype and documentation | `yashN1246826/nasa-project-app-build`; implementation `8180c03`, context `6795334` | [#1 — YN](https://github.com/yashN1246826/nasa-app/pull/1) → `master`                                                                   |
-| Pawan's combined version             | `pawan-crew-health-v2`; `e040831`                                                  | [#2 — ASTRA v2: crew health monitoring update](https://github.com/yashN1246826/nasa-app/pull/2) → `yashN1246826/nasa-project-app-build` |
+Yash rejected the original design as generic “AI slop.” Two subsequent implementation prompts requested a more useful operations console and then alignment with applicable macOS HIG principles. Those directions are implemented, but the new result has not been approved by Yash.
 
-Both PRs were open at this handoff check. Pawan's branch includes the original prototype and extends it; these are not two unrelated applications. PR #2 has not been merged into PR #1. `master` still contains the initial repository commit at the last branch inspection.
+The crew screen has identity/status/action first, five measurement rows and one trend. The medical officer has a priority queue, selected crew detail and inline review. Ground shows received snapshots, saved review notes and simulated replies. Scores are secondary. Research/body-system exploration is separate. There is a collapsible sidebar, compact toolbar, system typography and automatic OS appearance. Opaque surfaces and custom colors/radii are deliberate web adaptations; no native/Apple-certified claim is made.
 
-**Working rules:** keep changes on the feature branch and PR; do not push directly to `master` or `main`, rename the branch, merge PRs, or submit to NASA as an assumed consequence of documentation work. Keep PR #1 titled **YN**. Leave the primary workspace on `yashN1246826/nasa-project-app-build`.
-
-## Contributions
-
-The original implementation was generated with coding-assistant help on Yash's branch. Attribution should reflect that assistance.
-
-| Original foundation on Yash's branch                           | Pawan's extension                                                                  |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Dark dashboard, responsive CSS and five health indicator cards | Five crew profiles plus demo medical-officer and ground roles                      |
-| Manual daily check-in and numeric input validation             | Per-person baselines; direction-specific comparison rules                          |
-| Trend charts, observation dates and history                    | Reading rechecks, daily aggregation and missed-day display                         |
-| Clickable body-system explorer                                 | Illustrative readiness scores and sustained-change escalation                      |
-| Session checklist                                              | Tasks saved per crew member and day; suggested countermeasures                     |
-| Browser-local records and JSON export                          | Medical-officer triage, review notes, simulated downlink/uplink and acknowledgment |
-| NASA education links, research brief and AI disclosure         | In-app handover reports, migration/repair and cross-tab merge logic                |
-| Three automated tests                                          | Expanded suite of 41 tests                                                         |
-
-## Run and inspect
-
-Primary workspace:
+## Run and use it
 
 ```sh
 cd /Users/yashkumar/conductor/workspaces/nasa-app/hanoi
 npm ci
-npm run dev -- --port 5173
+npm run dev -- --port 5180
 ```
 
-Pawan's branch was checked out in an isolated, detached worktree so the main workspace's branch remains unchanged:
+Use the actual URL printed by Vite; the reviewed development address was `http://127.0.0.1:5180/`. Local servers may stop between sessions. Different ports have different browser storage. This is not a public deployment.
 
-```sh
-cd /Users/yashkumar/conductor/workspaces/nasa-app/hanoi/.context/pawan-preview
-npm ci
-npm test
-npm run build
-npm run preview -- --port 4174
-```
+1. Choose **Crew 3** under **Demo role**. Select an indicator to inspect its trend and underlying values. Record a fictional check-in; another reading that day is a recheck.
+2. Choose **Crew medical officer**. Pick someone from the queue, enter a note and **Save review**.
+3. **Send report to ground**. Choose **Ground flight surgeon**, select the snapshot and read its saved contents.
+4. Send a simulated recommendation, then return to the medical officer and **Acknowledge** it.
+5. Crew/medical Utilities offer JSON export and handover text. The report dialog offers Copy and Export report.
+6. Refresh fictional scenario regenerates synthetic history for today while retaining manual entries, notes and reports. It can leave the values unchanged when already current.
 
-If that worktree is missing in a future session, recreate it from the primary workspace:
+Below 768px, staff views start with the queue and open a separate detail view with a back control. The toolbar button shows/hides navigation. Change the OS appearance to change the theme; there is no independent theme picker.
 
-```sh
-git fetch origin
-git worktree add --detach .context/pawan-preview origin/pawan-crew-health-v2
-```
+## Data and code map
 
-Always check for existing servers first and use the URL printed by Vite. A local URL does not mean a public deployment, and preview processes may stop between sessions.
+React 19, Vite 7, plain CSS/SVG, Node tests. No added framework, backend or external font dependency.
 
-| Preview                  | Address used during review |
-| ------------------------ | -------------------------- |
-| Original development app | http://127.0.0.1:5173/     |
-| Combined development app | http://127.0.0.1:5174/     |
-| Original built app       | http://127.0.0.1:4173/     |
-| Combined built app       | http://127.0.0.1:4174/     |
+| File                           | Responsibility                                                                                  |
+| ------------------------------ | ----------------------------------------------------------------------------------------------- |
+| `src/main.jsx`                 | Application shell, roles, state integration, review/report workflows, history and exports       |
+| `src/ui.jsx`                   | Check-in dialog, compact measurements, accessible chart and underlying table                    |
+| `src/research.jsx`             | Body-system explorer, NASA sources and prototype boundaries                                     |
+| `src/health.js`                | v2 analysis/scenarios; neutral review-task copy                                                 |
+| `src/mission.js`               | Unchanged v2 persistence, migrations/repair, merges, reports/recommendations/acknowledgment     |
+| `src/style.css`                | Semantic light/dark themes, system typography, responsive layouts and accessibility preferences |
+| `public/theme-init.js`         | OS appearance initialization and live change listener, without storage access                   |
+| `tests/`                       | 47 passing tests: original 41 plus appearance, contrast and snapshot regression                 |
+| `.github/workflows/checks.yml` | PR tests and production build                                                                   |
 
-### Combined demo walkthrough
+Mission key: `astra-mission-v3`, 5,000-record cap, with older-key migration. Checklist key: `astra-checks-v1`, per crew/day. Existing `astra-theme` overrides are ignored and left untouched. Browser storage is local demonstration storage, not encrypted patient storage. Cross-tab merging is not communication between computers.
 
-1. Open the combined app and select **Crew 3** in **Viewing as**.
-2. Review the fictional history of disrupted sleep, rising heart rate and the displayed review flags.
-3. Select **Crew medical officer**. Inspect the crew priority table, select a crew member, and optionally save a fictional review note.
-4. Click **Send report to ground**. This changes only the local simulation; it sends no external message.
-5. Select **Ground flight surgeon** and inspect the received report. This view can enter a simulated recommendation.
-6. Switch back to the medical officer to inspect/acknowledge recommendations, or select a crew member to record a fictional daily check-in.
-7. Use the report/export controls to keep a local copy.
+Baselines use up to seven earlier **recorded days**, excluding unverified values; five earlier days are needed for a personal baseline. Sustained changes count recorded check-in days, not guaranteed uninterrupted calendar days. These calculations and all thresholds remain illustrative.
 
-All roles share one browser's data. The selector is not login, authorization or secure access control. Cross-tab merging is not cross-device communication.
+## Verification and limits
 
-## Technical map
+**47 tests and production build pass.** Safari checks completed check-in, reload persistence, review → fixed report → recommendation → acknowledgment. All three roles were inspected in light/dark, live OS switching was checked, and Safari explicitly confirmed 200% zoom. The original Light system appearance and 100% browser zoom were restored.
 
-React 19, Vite 7, plain CSS/SVG and Node's built-in test runner. There is no backend or paid API requirement.
+Chromium rendered the desktop crew/CMO and 390×844 CMO queue/detail. Later native automation became unreliable and intermittently painted blank. VoiceOver, a fully keyboard-only review submission, exact 1024×768 verification and a clean mobile crew capture remain outstanding. Full details and local screenshot filenames are in [DESIGN_REVIEW.md](DESIGN_REVIEW.md). Do not claim a complete accessibility/device audit or team approval.
 
-| File                           | Responsibility                                                                                                 |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------- |
-| `src/main.jsx`                 | Interface, role selection, check-in/report dialogs and local state integration                                 |
-| `src/health.js`                | Metrics, validation and example analysis; Pawan's branch adds crew scenarios, personal comparisons and scoring |
-| `src/mission.js`               | Pawan's branch only: persisted mission state, review/report operations, migration/repair and merge functions   |
-| `src/style.css`                | Shared visual foundation plus Pawan's role/report layouts                                                      |
-| `tests/health.test.js`         | Reading and analysis checks                                                                                    |
-| `tests/mission.test.js`        | Pawan's branch only: mission state, handovers and persistence checks                                           |
-| `vite.config.js`               | Pawan's branch only: relative asset paths; this alone does not deploy to GitHub Pages                          |
-| `.github/workflows/checks.yml` | Pull-request tests and production build                                                                        |
+## Where to submit
 
-Original storage key: `astra-demo-v1`, maximum 1,000 records. Combined mission storage key: `astra-mission-v3`, with migration from older keys and a 5,000-record cap. Combined checklist key: `astra-checks-v1`. These are browser-local demonstration stores, not encrypted patient records.
+Submit through [notttsSWE’s Project tab](https://www.spaceappschallenge.org/2026/find-a-team/notttsswe/?tab=project), not through a GitHub PR.
 
-## Verification completed
+The previously inspected organiser email and [submission guide](https://www.spaceappschallenge.org/resources/project-submission-guide/) recorded **15 November 2026, 23:59 UK time**. This is a recorded deadline, not a fresh verification of account/submission status.
 
-- Original: three tests and production build passed; browser checks covered fictional check-in, changed dashboard/trend, history, reload persistence and completed JSON download.
-- Combined `e040831`: **41 tests and production build passed locally on 15 November**. Its GitHub `verify` check also passed.
-- Combined browser checks: selected Crew 3, inspected escalation/readiness display, selected medical officer, inspected crew triage, clicked **Send report to ground**, then verified that the ground view displayed the report.
-- Sending a ground recommendation and acknowledging it were covered by automated tests; those two actions were not manually exercised in this comparison session.
-- Original Brave preview intermittently painted blank despite its content being present in the accessibility tree. The combined view rendered successfully. Do not represent the comparison session as a clean cross-browser validation of both apps.
-- No formal accessibility audit, full mobile/device pass, clinical evaluation or security review has been completed.
+Remaining submission work: team review, final public artifact/app links, a demo of at most 30 seconds or seven slides, English project summary/details, actual NASA references, AI-use disclosure and signed-out link checks. The repository is private and localhost is unavailable to judges. A team member must review the submission terms and complete Submit for Judging; saving a draft is not submission. This assistant has not deployed or submitted the project.
 
-Screenshots remain gitignored under `.context/`: `astra-dashboard.png` is the earlier verified original dashboard; `comparison-medical-officer.png`, `comparison-combined-crew.png` and `comparison-ground.png` document the combined review. `comparison-original.png` captured a blank preview and is not useful for a demo. Do not rely on these local paths existing in a fresh clone.
+## Supporting context
 
-## Limits and specific review points
+[README.md](README.md) is the quick start. [NASA_PROJECT_CONTEXT.md](NASA_PROJECT_CONTEXT.md), [PROJECT_BRIEF.md](PROJECT_BRIEF.md) and earlier [BUILD_LOG.md](BUILD_LOG.md) sections preserve the original account research/proposal and history; older current-state claims in them should be read with this update.
 
-- All numerical rules, scenarios and readiness scores are illustrative. A passing test suite verifies programmed behavior, not clinical correctness.
-- “Mission ready” is not a validated fitness determination. Revisit this label before presenting the app.
-- Combined countermeasure copy includes specific advice such as an extra fluid quantity. These instructions are not backed by a reviewed protocol in this project; replace with sourced, qualified guidance or omit them.
-- Personal baselines use up to seven earlier recorded days, not necessarily the last seven calendar days. Sustained-change logic counts successive recorded check-in days and does not itself enforce uninterrupted calendar days. Review the claims and edge cases.
-- The rolling baseline may adapt during an ongoing change; evaluate whether that can hide the scenario the demo intends to surface.
-- “Reset demo crew” is reported by Pawan as having no visible effect in the current demo. Resolve its purpose before relying on it in the demonstration.
-- No authenticated accounts, backend, cloud sync, real telemetry, clinical diagnosis, validated treatment system or installed offline app is implemented.
-- The project has not been publicly deployed or submitted to NASA by this assistant. Submission status has not been rechecked in the account during this handoff.
-
-## Submission handoff
-
-Submit through [notttsSWE's Project tab](https://www.spaceappschallenge.org/2026/find-a-team/notttsswe/?tab=project), not through a GitHub PR.
-
-The [official submission guide](https://www.spaceappschallenge.org/resources/project-submission-guide/) and the previously read London organiser email give the deadline as **15 November 2026, 11:59 pm UK time**. This is the recorded event deadline, not a newly checked account status.
-
-Before submitting:
-
-- Agree the final scope and review the combined version; it is the stronger current candidate, but Yash has not approved the design.
-- Resolve critical demo issues, review medical claims and decide which branch/commit is the final artifact.
-- Supply a public app or accessible final-project artifact. The private repository and localhost links are insufficient for judges.
-- Create a demo of at most **30 seconds** or at most **seven slides**, including introductory slides.
-- Complete the project name, summary, detailed description, NASA resource use, references and AI-use disclosure. Cite the actual NASA material used; do not claim the synthetic records are NASA patient data.
-- Keep submission materials in English; a non-English demo video needs English subtitles.
-- Test every public link while signed out.
-- Review originality and terms personally, then use **Submit for Judging**. Saving progress alone is not submission.
-
-The global guide and local email differed on editing after submission; the recorded recommendation is to finish and freeze the artifacts first, and ask the organisers if changes are needed afterward.
-
-## Research and supporting documents
-
-- [NASA: Five Hazards of Human Spaceflight](https://www.nasa.gov/hrp/hazards/)
-- [NASA: Risks of Human Spaceflight](https://www.nasa.gov/hrp/risks/)
-- [NASA: Ongoing HRP Research](https://www.nasa.gov/hrp/ongoing-hrp-research/)
-- [Challenge resources](https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/?tab=resources)
-- [PROJECT_BRIEF.md](PROJECT_BRIEF.md): full initial research and proposed work split.
-- [NASA_PROJECT_CONTEXT.md](NASA_PROJECT_CONTEXT.md): historical consolidated context; use this handoff for the newer branch and collaboration state.
-- [BUILD_LOG.md](BUILD_LOG.md): initial build evidence.
-- [README.md](README.md): original branch setup and behavior.
-
-## Next-session priorities
-
-1. Read the latest user feedback above; do not keep polishing a rejected design without clarifying its intended workflow.
-2. Inspect both branches and any new commits before editing. Preserve unrelated user changes.
-3. Agree a focused demonstration narrative with Yash and Pawan and review the listed analysis/medical-copy issues.
-4. Improve the chosen workflow and visual direction, then verify the actual user journey, not just unit tests.
-5. Update documentation to match the selected version, prepare accessible submission artifacts and keep all code changes off `master` unless separately authorized.
+The detached `.context/pawan-preview` worktree remains available for comparison with Pawan’s original `e040831`. Screenshots under `.context/` are local and gitignored. The originally attached travel brochure was unrelated to the NASA challenge.

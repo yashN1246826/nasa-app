@@ -35,3 +35,7 @@ This is a functioning educational prototype. Clinical validation, actual astrona
 Responsive CSS is implemented; a dedicated real-device/mobile test and a formal accessibility audit have not been completed. Keyboard and screen-reader semantics are included, but should receive further user testing. No NASA project submission or deployment has been performed. The repository remains private; the team must supply a publicly accessible demo for judges.
 
 All source and project documents belong on the current feature branch and a PR against master. The target PR title is YN. No direct update to master is authorized or performed.
+
+## 15 November 2026 — combined-v2 operations interface
+
+Brought Pawan’s `e040831` source and 41 tests onto the existing feature branch without merging PR #2. Rebuilt crew, medical review and ground report layouts; added system typography, automatic OS appearance, collapsible navigation, accessible check-in/report dialogs, calendar-spaced charts and neutral review-task wording. The v2 mission data model is unchanged. Added appearance, contrast and fixed-snapshot tests: 47 tests and production build pass. Safari handover, live OS appearance and 200% zoom were checked. Chromium desktop/mobile CMO rendered, with later native automation issues limiting the remaining matrix. See [DESIGN_REVIEW.md](DESIGN_REVIEW.md) for evidence and outstanding manual checks. No deployment, merge or NASA submission.
