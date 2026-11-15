@@ -752,3 +752,245 @@ td {
     flex-wrap: wrap;
   }
 }
+
+.insight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.insight h2 small {
+  font-size: 0.5em;
+  font-weight: 500;
+  margin-left: 6px;
+  opacity: 0.75;
+}
+.insight .status {
+  display: inline-block;
+  margin-top: 6px;
+  white-space: normal;
+}
+@media (max-width: 720px) {
+  .insight {
+    grid-template-columns: 1fr;
+  }
+}
+
+.role-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.role-select select {
+  appearance: none;
+  background: transparent;
+  border: 1px solid #34404b;
+  border-radius: 5px;
+  color: #d5dce4;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 0;
+  padding: 6px 26px 6px 10px;
+  cursor: pointer;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #8a98a7 50%),
+    linear-gradient(135deg, #8a98a7 50%, transparent 50%);
+  background-position:
+    calc(100% - 13px) 50%,
+    calc(100% - 9px) 50%;
+  background-size: 4px 4px;
+  background-repeat: no-repeat;
+}
+.role-select select:focus-visible {
+  outline: 2px solid #6fb4ff;
+  outline-offset: 2px;
+}
+.role-select option {
+  background: #1a232c;
+  color: #d5dce4;
+}
+.crew-panel {
+  margin-bottom: 20px;
+}
+.crew-panel table {
+  margin-top: 12px;
+}
+.crew-panel tr.selected td {
+  background: rgba(111, 180, 255, 0.06);
+}
+.crew-panel td.wrap {
+  white-space: normal;
+}
+.link-button {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.link-button small {
+  display: block;
+  color: #8f9fad;
+  font-size: 10px;
+  margin-top: 2px;
+}
+.link-button:hover {
+  text-decoration: underline;
+}
+@media (max-width: 720px) {
+  .role-select span {
+    display: none;
+  }
+  .crew-panel table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.mission-day {
+  margin-right: 16px;
+  white-space: nowrap;
+}
+.mission-day b {
+  margin-left: 4px;
+  color: #d5dce4;
+}
+@media (max-width: 720px) {
+  .mission-day {
+    display: none;
+  }
+}
+
+.confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #d5dce4;
+  font-size: 12px;
+}
+.report-view {
+  margin-bottom: 20px;
+}
+.report-view textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0d141b;
+  color: #d5dce4;
+  border: 1px solid #26303b;
+  border-radius: 8px;
+  padding: 14px;
+  font:
+    12px/1.6 ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  resize: vertical;
+}
+.report-actions {
+  display: flex;
+  gap: 8px;
+}
+.stack {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.stack label {
+  display: grid;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: #8f9fad;
+}
+.stack textarea,
+.stack select {
+  background: #0d141b;
+  color: #d5dce4;
+  border: 1px solid #34404b;
+  border-radius: 6px;
+  padding: 9px 10px;
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: 0;
+}
+.stack textarea:focus-visible,
+.stack select:focus-visible {
+  outline: 2px solid #6fb4ff;
+  outline-offset: 1px;
+}
+.stack button {
+  justify-self: start;
+}
+.messages {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: grid;
+  gap: 10px;
+}
+.messages li {
+  border: 1px solid #26303b;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 13px;
+  color: #d5dce4;
+  display: grid;
+  gap: 6px;
+}
+.messages small {
+  color: #8f9fad;
+  font-size: 11px;
+}
+.inline-action {
+  justify-self: start;
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 8px 12px;
+}
+td small.sub {
+  display: block;
+  color: #8f9fad;
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+.mobile-hint {
+  display: none;
+  font-size: 11px;
+  color: #8f9fad;
+  margin: 8px 0 0;
+}
+.table-scroll {
+  overflow-x: auto;
+}
+@media (max-width: 720px) {
+  .mobile-hint {
+    display: block;
+  }
+}
+.recovery {
+  max-width: 640px;
+  margin: 80px auto;
+  padding: 24px;
+  color: #d5dce4;
+  display: grid;
+  gap: 16px;
+}
+.recovery textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #0d141b;
+  color: #d5dce4;
+  border: 1px solid #26303b;
+  border-radius: 8px;
+  padding: 12px;
+  font:
+    12px ui-monospace,
+    Menlo,
+    monospace;
+}
+.recovery button {
+  justify-self: start;
+}
