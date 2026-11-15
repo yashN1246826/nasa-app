@@ -1,5 +1,7 @@
 # NASA project context — ASTRA / notttsSWE
 
+> For the latest state as of 15 November, read [HANDOFF.md](HANDOFF.md). The snapshot below predates Pawan's v2 branch, accepted collaborator access and subsequent user feedback.
+
 Context snapshot: 14 November 2026. This is the consolidated handoff for Yash, Pawan and future coding sessions. It preserves the project research, product decisions, implemented behavior, verification, collaboration setup and remaining work in one file. Facts verified in the Space Apps account are distinguished from proposed product choices below.
 
 ## Quick orientation

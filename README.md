@@ -36,6 +36,8 @@ All sample readings, baseline values and comparison rules are invented for demon
 
 ## Project documents
 
+- [HANDOFF.md](HANDOFF.md): current handoff covering both branches, Pawan's additions, user feedback and next steps.
+
 - [NASA_PROJECT_CONTEXT.md](NASA_PROJECT_CONTEXT.md): consolidated project context and continuation handoff.
 
 - [PROJECT_BRIEF.md](PROJECT_BRIEF.md): verified challenge, proposed product, features, NASA resources, architecture, responsibilities, roadmap, submission requirements and demo outline.
